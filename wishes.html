@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ganesh Chaturthi Wishes</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Ganesh Chaturthi Wishes</h1>
+        <p>Dear <span id="userName"></span>,</p>
+        <p>May Lord Ganesha shower you with blessings, happiness, and prosperity on this auspicious occasion of Ganesh Chaturthi. Wishing you a joyous and blessed celebration.</p>
+        <p><strong>Ganpati Bappa Morya!</strong></p>
+        <p>Warm regards,</p>
+        <p><span class="signature">Arbaj Shaikh</span></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const userName = localStorage.getItem("userName");
+        if (userName) {
+            document.getElementById("userName").innerText = userName;
+        } else {
+            window.location.href = "index.html"; // Redirect to home page if name is not set
+        }
+
+        // Disable scrolling on page load
+        document.body.style.overflow = "hidden";
+
+        // Enable scrolling after a delay (adjust the delay as needed)
+        setTimeout(() => {
+            document.body.style.overflow = "auto";
+        }, 500);
+    </script>
+</body>
+</html>
